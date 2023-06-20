@@ -1,11 +1,11 @@
-import { NavBar } from './NavBar';
-import { Home } from './Home';
+import SideBar from './Sidebar_Component/SideBar';
+import Home from './Home_Component/Home';
 
 const App = () => {
   return (
     <main>
       <Home />
-      <NavBar />
+      <SideBar />
     </main>
   );
 };

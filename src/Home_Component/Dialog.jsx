@@ -1,5 +1,5 @@
 import React from 'react';
-import { getContext } from './GlobalContext';
+import { getContext } from '../Context/globalContext';
 import { FaTimes } from 'react-icons/fa';
 
 export function Dialog() {
