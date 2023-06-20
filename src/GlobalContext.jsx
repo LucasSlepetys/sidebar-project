@@ -1,5 +1,7 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useRef } from 'react';
 import { links, social } from './data';
+
+// ! -------------------------------------------- !
 
 const GlobalContext = createContext();
 
@@ -7,11 +9,23 @@ export const getContext = () => {
   return useContext(GlobalContext);
 };
 
+// ! -------------------------------------------- !
+
 const Context = ({ children }) => {
+  const dialogRef = useRef(null);
+
+  const closeModal = () => {
+    dialogRef.current.close();
+  };
+
+  const showModal = () => {
+    dialogRef.current.showModal();
+  };
+
+  const values = { links, social, dialogRef, closeModal, showModal };
+
   return (
-    <GlobalContext.Provider value={{ links, social }}>
-      {children}
-    </GlobalContext.Provider>
+    <GlobalContext.Provider value={values}>{children}</GlobalContext.Provider>
   );
 };
 
