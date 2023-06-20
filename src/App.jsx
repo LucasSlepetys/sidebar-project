@@ -1,4 +1,4 @@
-import { getContext } from './context';
+import { getContext } from './GlobalContext';
 import useShow from './useShow';
 import { FaTimes, FaBars } from 'react-icons/fa';
 import logo from './logo.svg';
