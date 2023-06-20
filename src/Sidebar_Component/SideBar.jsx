@@ -4,13 +4,14 @@ import React from 'react';
 import logo from '../assets/logo.svg';
 import { getContext } from '../Context/globalContext';
 import { FaTimes } from 'react-icons/fa';
+import { links, social } from '../data';
 
 function SideBar() {
-  const { links, social, isSideDisplayed, toggleSideDisplay } = getContext();
+  const { isSideDisplayed, toggleSideDisplay } = getContext();
 
   return (
     <>
-      <div className={isSideDisplayed ? 'sidebar show-container' : 'sidebar'}>
+      <aside className={isSideDisplayed ? 'sidebar show-container' : 'sidebar'}>
         <div className='sidebar-top'>
           <div className='sidebar-header'>
             <img className='logo' src={logo} alt='Coding Addict' />
@@ -27,7 +28,7 @@ function SideBar() {
             return <IconLink key={socialLink.id} {...socialLink} />;
           })}
         </ul>
-      </div>
+      </aside>
     </>
   );
 }

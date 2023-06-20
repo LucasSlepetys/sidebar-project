@@ -1,5 +1,4 @@
 import { createContext, useContext, useRef } from 'react';
-import { links, social } from '../data';
 import useShow from './useShow';
 
 // ! --------- Context + Function to get values --------- !
@@ -32,8 +31,6 @@ const Context = ({ children }) => {
 
   //values to be put into .Provider
   const values = {
-    links,
-    social,
     dialogRef,
     closeModal,
     showModal,
